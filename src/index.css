@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* colors used */
+  --color-p1: #f6101e; /* Your vibrant red */
+  --color-p2: #ff416c; /* Vibrant rose */
+  --color-p3: #ff4d4d; /* Futuristic neon red */
+  --color-p4: #ff9a8b; /* Coral highlight */
+  --color-p5: #ffd6d6; /* Soft red/white for backgrounds */
+
+  --color-s1: #0d0c11; /* Your dark base */
+  --color-s2: #1a1820; /* Darker muted gray */
+  --color-s3: #2a2833; /* Slightly lighter for cards */
+  --color-s4: #2f1e2e; /* Purple/gray shadow */
+  --color-s5: #3b2b45; /* Dark mauve for blending */
+
+  --color-a1: #e600ff; /* Neon violet accent */
+  --color-a2: #00f0ff; /* Electric cyan pop */
+  --color-a3: #ffef00; /* Bright cyber yellow */
+  --color-a4: #00ffa6; /* Aqua green */
+
+  /* font used */
+  --font-bebas: "Bebas Neue", sans-serif; /* Used for headers */
+  --font-barlow: "Barlow Condensed", sans-serif; /* Used for menu bars and subheadings */
+  --font-exo: "Exo 2", sans-serif; /* descriptions and statements */
+
+  /* Spacing */
+  --spacing-1/5: 20%;
+  --spacing-2/5: 40%;
+  --spacing-3/5: 60%;
+  --spacing-4/5: 80%;
+  --spacing-3/20: 15%;
+  --spacing-7/20: 35%;
+  --spacing-9/20: 45%;
+  --spacing-11/20: 55%;
+  --spacing-13/20: 65%;
+  --spacing-15/20: 75%;
+  --spacing-17/20: 85%;
+  --spacing-19/20: 95%;
+  --spacing-22: 88px;
+  --spacing-100: 100px;
+  --spacing-512: 512px;
+  --spacing-330: 330px;
+  --spacing-388: 388px;
+  --spacing-400: 400px;
+  --spacing-440: 440px;
+  --spacing-640: 640px;
+  --spacing-960: 960px;
+  --spacing-1230: 1230px;
+
+  /* Z-index */
+  --zindex-1: 1;
+  --zindex-2: 2;
+  --zindex-4: 4;
+
+  /* Line Height */
+  --leading-12: 48px;
+
+  /* Border Radius */
+  --radius-14: 14px;
+  --radius-20: 20px;
+  --radius-40: 40px;
+  --radius-half: 50%;
+  --radius-7xl: 40px;
+
+  /* Flex */
+  --flex-50: 0 0 50%;
+  --flex-320: 1px 0 320px;
+  --flex-300: 0 0 300px;
+  --flex-540: 0 0 540px;
+  --flex-280: 0 0 280px;
+  --flex-256: 0 0 256px;
+  --flex-100: 0 0 100%;
+}
+
+@layer base {
+  html {
+    @apply bg-s1;
+  }
+
+  body {
+    @apply font-exo text-[16px] tracking-wide text-white;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  button {
+    @apply bg-none tracking-wide;
+  }
+
+  input {
+    @apply tracking-wide;
+  }
+}
+
+@layer utilities {
+  /* Gradients */
+  .g1 {
+    background-image: linear-gradient(135deg, #f6101e 0%, #ff416c 100%);
+  }
+
+  .g2 {
+    background-image: linear-gradient(135deg, #0d0c11 0%, #2a2833 100%);
+  }
+
+  .g3 {
+    background-image: linear-gradient(90deg, #ff4d4d, #e600ff);
+  }
+
+  .g4 {
+    background-image: linear-gradient(45deg, #0d0c11, #2f1e2e, #3b2b45);
+  }
+
+  .g5 {
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      #00ffa6,
+      transparent
+    );
+  }
+
+  .g6 {
+    background-image: linear-gradient(
+      135deg,
+      #0d0c11 0%,
+      #1a1820 50%,
+      #3b2b45 100%
+    );
+  }
+
+  .g7 {
+    background-image: linear-gradient(
+      180deg,
+      #ff9a8b 0%,
+      #ff6a88 50%,
+      #ff99ac 100%
+    );
+  }
+
+  .g8 {
+    background-image: radial-gradient(circle, #ff416c 0%, #0d0c11 70%);
+  }
+
+  .g9 {
+    background-image: radial-gradient(circle at center, #00f0ff, #0d0c11);
+  }
+
+  .h-num {
+    @apply font-barlow text-[72px] font-bold leading-[84px];
+  }
+
+  .h1 {
+    @apply text-[84px] font-black leading-[84px] tracking-[-0.03em];
+  }
+
+  .h2 {
+    @apply text-[64px] font-black leading-[64px];
+  }
+
+  .h3 {
+    @apply text-[48px] font-semibold leading-[56px] tracking-[-0.02em];
+  }
+
+  .h4 {
+    @apply text-[40px] font-semibold leading-[52px];
+  }
+
+  .h5 {
+    @apply text-[32px] font-semibold leading-[40px];
+  }
+
+  .h6 {
+    @apply text-[24px] font-medium leading-[36px];
+  }
+
+  .body-1 {
+    @apply text-[22px] leading-[36px];
+  }
+
+  .body-2 {
+    @apply text-[18px] font-semibold leading-[32px];
+  }
+
+  .body-3 {
+    @apply text-[16px] leading-[28px] tracking-[0.02em];
+  }
+
+  .base {
+    @apply text-[19px] font-medium leading-[24px] tracking-[0.03em];
+  }
+
+  .base-bold {
+    @apply text-[16px] font-bold leading-[24px];
+  }
+
+  .base-small {
+    @apply text-[14px] font-semibold leading-[18px] tracking-[0.03em];
+  }
+
+  .small-1 {
+    @apply text-[14px] font-semibold leading-[18px] tracking-[0.03em];
+  }
+
+  .small-2 {
+    @apply text-[12px] font-bold leading-[16px] tracking-[0.3em];
+  }
+
+  .small-compact {
+    @apply text-[12px] font-semibold leading-[18px] tracking-[0.03em];
+  }
+
+  .flex-between {
+    @apply flex flex-row items-center justify-between;
+  }
+
+  .flex-center {
+    @apply flex flex-row items-center justify-center
+  }
+
+  .flex-around {
+    @apply flex flex-row items-center justify-around
+  }
+
+  .inner-before {
+    @apply before:absolute before:inset-0 before:opacity-0 before:transition-opacity before:duration-500 before:content-['']
+  }
+
+  /*START of Custom Button*/
+  .inner-before {
+    @apply before:absolute before:inset-0 before:opacity-0 before:transition-opacity before:duration-500 before:content-[''];
+  }
+
+  .glow-before::before {
+    background: linear-gradient(
+      to right,
+      transparent,
+      #f6101e,
+      transparent
+    );
+  }
+
+  .glow-before {
+    @apply before:absolute before:left-2/5 before:top-0 before:z-4 before:h-0.5 before:w-3/5 before:opacity-0 before:transition-all before:duration-500 before:content-[''] group-hover:before:left-4 group-hover:before:opacity-40;
+  }
+
+  .glow-after::after {
+    background: linear-gradient(
+      to right,
+      transparent,
+      #f6101e,
+      transparent
+    );
+  }
+
+  .glow-after {
+    @apply after:absolute after:bottom-0 after:left-4 after:z-4 after:h-0.5 after:w-7/20 after:opacity-0 after:transition-all after:duration-500 after:content-[''] group-hover:after:left-3/5 group-hover:after:opacity-40;
+  }
+
+  /*END of Custom Button*/
+
+  .sidebar-before {
+    @apply max-lg:before:absolute max-lg:before:-right-64 max-lg:before:top-2/5 max-lg:before:h-[440px] max-lg:before:2-[252px] max-lg:before:bg-s4 max-lg:before:blur-[200px] max-lg:before:content-['']
+  }
+}
