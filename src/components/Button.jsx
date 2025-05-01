@@ -4,7 +4,7 @@ import React from 'react'
 const Button = ({children, href, icon, onClick}) => {
     const Inner = () => (
         <>
-            <span className='flex-between relative rounded-3xl px-5 py-1.5 inner-before bg-s3 group-hover:bg-s4 group-hover:opacity-100 overflow-hidden'>
+            <span className='flex-between relative rounded-xl px-5 py-1.5 inner-before bg-s3 group-hover:bg-s4 group-hover:opacity-100 overflow-hidden'>
                 <span>
                     {icon && (icon) }
                 </span>
@@ -17,11 +17,11 @@ const Button = ({children, href, icon, onClick}) => {
     )
 
   return href ?  (
-    <a href={href} className={clsx("relative p-0.5 rounded-2xl shadow-500 group cursor-pointer transition-colors duration-500")}>
+    <a href={href} className={clsx("relative p-0.5 rounded-xl shadow-500 group cursor-pointer transition-colors duration-500 px-4 py-1")}>
         <Inner />
     </a>
   ) : (
-    <button onClick={onClick} className={clsx("relative p-0.5 rounded-2xl shadow-500 group cursor-pointer transition-colors duration-500")}> 
+    <button onClick={onClick} className={clsx("relative p-0.5 rounded-xl shadow-500 group cursor-pointer transition-colors duration-500 px-4 py-1.5")}> 
         <Inner />
     </button>
   );

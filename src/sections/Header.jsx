@@ -6,10 +6,10 @@ import { CiMenuBurger } from "react-icons/ci";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     document.title = "TubeFlix";
   }, []);
-
 
   const NavLink = ({ title }) => (
     <Link
@@ -24,10 +24,10 @@ const Header = () => {
   );
 
   return (
-    <header className="w-full fixed top-0 z-20 font-bebas flex-center my-1.5">
+    <header className="w-full fixed top-0 z-20 font-bebas flex-center py-1.5 backdrop-blur-lg">
 
       <div className="container flex-between px-6">
-        <div className="flex-center">
+        <div className="flex-center cursor-pointer">
           <a href="">
             <img
               src="/Images/tubeflix.png"
@@ -37,7 +37,7 @@ const Header = () => {
               className="cursor-pointer"
             />
           </a>
-          <p className="text-p1 px-2 hidden md:block">TubeFlix</p>
+          <p className="text-p1 px-2 ">TubeFlix</p>
         </div>
 
         {/* Desktop nav */}
