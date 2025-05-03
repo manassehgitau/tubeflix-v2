@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import Button from "../components/Button";
@@ -39,18 +39,18 @@ const Hero = () => {
     <section className="">
       <Element name="hero">
         <div>
-          <div className="-z-5 flex justify-center items-center bg-s1 opacity-20 mix-blend-hard-light">
+          <div className="-z-5 flex justify-center items-center bg-s1 opacity-18 mix-blend-hard-light relative">
             <Swiper
               spaceBetween={30}
               centeredSlides={true}
               autoplay={{
-                delay: 10000,
+                delay: 17000,
                 disableOnInteraction: false,
               }}
               direction={"vertical"}
               
               modules={[Autoplay, Navigation]}
-              className="w-full h-screen relative"
+              className="w-full h-screen"
             >
               {heroData.map((result) => (
                 <SwiperSlide key={result.id}>
@@ -66,7 +66,7 @@ const Hero = () => {
             </Swiper>
           </div>
 
-          <div className="absolute inset-0 z-2 flex flex-col items-center justify-start lg:justify-center px-5 max-lg:py-30 lg:py-10">
+          <div className="absolute inset-0 z-2 flex flex-col items-center justify-center px-5 max-md:-py-70 max-lg:py-20 lg:py-10">
             <div className="py-10 self-start">
               <h1 className="text-3xl md:text-5xl font-bebas tracking-normal text-p1">
                 Find Your Next Binge-Worthy Obsession
@@ -79,13 +79,17 @@ const Hero = () => {
 
             <div className="space-y-8 space-x-10 pt-5 lg:pt-25">
               {/* TODO: Fix Button Component */}
-              <Button icon={<MdExplore />}>Start Exploring</Button>
+              <Link to="Features" offset={-100} spy smooth>
+                <Button icon={<MdExplore className="group-hover:text-p1"/>}>Start Exploring</Button>
+              </Link>
 
-              <Button icon={<IoMdContacts />}>Contact Us</Button>
+              <Link to="Contact Us" offset={-100} spy smooth>
+                <Button icon={<IoMdContacts className="group-hover:text-p1"/>}>Contact Us</Button>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-b from-p2 to-s1 mix-blend-overlay  pointer-events-none z-30"></div>
+        <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-b from-p2 to-s1 opacity-35 mix-blend-soft-light  pointer-events-none -z-3"></div>
       </Element>
     </section>
   );

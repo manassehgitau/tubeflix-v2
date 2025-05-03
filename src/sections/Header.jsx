@@ -17,16 +17,16 @@ const Header = () => {
       offset={100}
       spy
       smooth
-      className="base text-[1px] text-p3 capitalize transition-colors duration-500 cursor-pointer hover:text-white px-7 max-lg:my-4 max-lg:h5"
+      activeClass="text-p1"
+      className="base text-[1px] text-p3 capitalize transition-colors duration-500 cursor-pointer hover:text-white px-4 max-lg:h5"
     >
       {title}
     </Link>
   );
 
   return (
-    <header className="w-full fixed top-0 z-20 font-bebas flex-center py-1.5 backdrop-blur-lg">
-
-      <div className="container flex-between px-6">
+    <header className="w-full fixed top-0 z-20 font-bebas flex-center backdrop-blur-sm">
+      <div className="container flex-between max-lg:px-6 px-1">
         <div className="flex-center cursor-pointer">
           <a href="">
             <img
@@ -46,7 +46,6 @@ const Header = () => {
           <NavLink title="Features" />
           <NavLink title="Trending" />
           <NavLink title="Pricing" />
-          <NavLink title="Testimonials" />
           <NavLink title="Contact Us" />
         </nav>
 
@@ -68,7 +67,7 @@ const Header = () => {
 
       {/* Mobile nav - shows only when open */}
       {isOpen && (
-        <nav className="fixed top-0 left-0 w-full h-screen bg-s2 flex flex-col items-center justify-center space-y-8 z-50 transition-all duration-500 sidebar-before px-4 lg:hidden">
+        <nav className="fixed top-0 left-0 w-full h-screen bg-s2 flex-col-center space-y-8 z-50 transition-all duration-500 sidebar-before px-4 lg:hidden">
           {/* Close button inside mobile nav */}
           <div
             className="absolute top-5 right-6 text-3xl text-white cursor-pointer"
