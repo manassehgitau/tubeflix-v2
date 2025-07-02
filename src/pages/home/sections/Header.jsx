@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import Button from "../components/Button";
+import Button from "../../../components/Button";
 import { IoIosCloseCircleOutline, IoMdLogIn } from "react-icons/io";
 import { CiMenuBurger } from "react-icons/ci";
 
@@ -14,7 +14,7 @@ const Header = () => {
   const NavLink = ({ title }) => (
     <Link
       to={title}
-      offset={100}
+      offset={-100}
       spy
       smooth
       activeClass="text-p1"

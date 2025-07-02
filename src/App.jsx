@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "./sections/Header";
-import Hero from "./sections/Hero";
-import About from "./sections/About";
-import Features from "./sections/Features";
-import Trending from "./sections/Trending";
-import Pricing from "./sections/Pricing";
-import ContactUs from "./sections/ContactUs";
-import Footer from "./sections/Footer";
+import Header from "./pages/home/sections/Header";
+import Hero from "./pages/home/sections/Hero";
+import About from "./pages/home/sections/About";
+import Features from "./pages/home/sections/Features";
+import Trending from "./pages/home/sections/Trending";
+import Pricing from "./pages/home/sections/Pricing";
+import ContactUs from "./pages/home/sections/ContactUs";
+import Footer from "./pages/home/sections/Footer";
 
 const App = () => {
   return (

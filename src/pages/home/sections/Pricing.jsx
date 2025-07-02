@@ -1,7 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
 import { pricing } from "../constants";
-import PriceItem from "../components/PriceItem";
+import PriceItem from "../../../components/PriceItem";
 
 const Pricing = () => {
   return (

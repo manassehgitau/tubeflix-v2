@@ -1,7 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
 import { FeatureList } from "../constants";
-import FeatureItem from "../components/FeaturesItem";
+import FeatureItem from "../../../components/FeaturesItem";
 
 const Features = () => {
   const halfLength = Math.floor(FeatureList.length / 2);

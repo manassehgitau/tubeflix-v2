@@ -23,26 +23,27 @@ const Trending = () => {
             },
           }
         );
-        const page2 = await fetch(
-          `${
-            import.meta.env.VITE_TMDB_BASE_URL
-          }/trending/all/day?language=en-US&page=2`,
-          {
-            headers: {
-              Authorization: `bearer ${
-                import.meta.env.VITE_TMDB_API_READ_ACCESS_TOKEN
-              }`,
-            },
-          }
-        );
+        // const page2 = await fetch(
+        //   `${
+        //     import.meta.env.VITE_TMDB_BASE_URL
+        //   }/trending/all/day?language=en-US&page=2`,
+        //   {
+        //     headers: {
+        //       Authorization: `bearer ${
+        //         import.meta.env.VITE_TMDB_API_READ_ACCESS_TOKEN
+        //       }`,
+        //     },
+        //   }
+        // );
 
         const data1 = await page1.json();
-        const data2 = await page2.json();
+        // const data2 = await page2.json();
 
-        const combinedResults = [...data1.results, ...data2.results];
+        // const combinedResults = [...data1.results, ...data2.results];
         // console.log(combinedResults);
 
-        setTrendingData(combinedResults.slice(0, 40));
+        // setTrendingData(combinedResults.slice(0, 40));
+        setTrendingData(data1.results);
       } catch (err) {
         console.error("Error Fetching data: ", err);
       }
