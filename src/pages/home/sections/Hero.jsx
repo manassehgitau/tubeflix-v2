@@ -6,6 +6,7 @@ import Button from "../../../components/Button";
 import "swiper/css";
 import { IoMdContacts } from "react-icons/io";
 import { MdExplore } from "react-icons/md";
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 
 const Hero = () => {
