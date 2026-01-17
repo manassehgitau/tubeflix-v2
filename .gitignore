@@ -26,3 +26,5 @@ dist-ssr
 # personal vscode settings
 .vscode
 .env
+.vercel
+.env*.local
